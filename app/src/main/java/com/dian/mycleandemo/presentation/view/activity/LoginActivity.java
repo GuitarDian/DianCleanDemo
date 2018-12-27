@@ -7,10 +7,12 @@ import com.dian.mycleandemo.R;
 import com.dian.mycleandemo.presentation.base.BaseActivity;
 import com.dian.mycleandemo.presentation.base.BaseApp;
 import com.dian.mycleandemo.presentation.base.BasePresenter;
+import com.dian.mycleandemo.presentation.presenter.LoginPresenter;
 import com.dian.mycleandemo.presentation.rule.LoginRule;
 import com.dian.mycleandemo.presentation.util.Preconditions;
 import com.dian.mycleandemo.presentation.util.TextUtil;
 import com.dian.mycleandemo.presentation.util.ToastUtil;
+import com.dian.mycleandemo.presentation.view.util.InjectUtil;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -39,7 +41,8 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected BasePresenter genPresenter() {
-        return null;
+        presenter = new LoginPresenter(InjectUtil.provideLoginUseCase(BaseApp.getContext()));
+        return (BasePresenter) presenter;
     }
 
     @OnClick({R.id.btn_login})
