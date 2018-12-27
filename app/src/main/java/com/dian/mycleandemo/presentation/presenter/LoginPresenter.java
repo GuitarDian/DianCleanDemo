@@ -10,7 +10,6 @@ import io.reactivex.observers.DisposableObserver;
 
 /**
  * Created by Dian on 2018/12/23
- * 登录presenter
  */
 public class LoginPresenter extends BasePresenter<LoginRule.V> implements LoginRule.P{
 
