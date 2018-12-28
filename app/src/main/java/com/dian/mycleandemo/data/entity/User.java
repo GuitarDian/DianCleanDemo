@@ -5,6 +5,7 @@ import org.greenrobot.greendao.annotation.Generated;
 
 /**
  * Created by Dian on 2018/12/23
+ * 登录返回类
  */
 
 @Entity
